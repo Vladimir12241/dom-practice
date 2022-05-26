@@ -32,7 +32,7 @@ body {
 }
 
 .logo {
-  height: 80px;
+  height: 60px;
   margin-left: 20px;
 }
 
@@ -242,6 +242,11 @@ body {
 }
 
 @media (min-width: 769px) {
+  
+  .logo {
+    height: 80px;
+  }
+  
   .menu-btn {
     display: none;
   }
