@@ -30,8 +30,13 @@ body {
 }
 
 .logo {
+<<<<<<< HEAD
 	height: 60px;
 	margin-left: 20px;
+=======
+  height: 60px;
+  margin-left: 20px;
+>>>>>>> b591e15484be13fa90a661b57fed0f80a041c1a9
 }
 
 .favicon {
@@ -234,6 +239,7 @@ body {
 }
 
 .while-preload {
+<<<<<<< HEAD
 	opacity: 0;
 	display: none;
 }
@@ -285,4 +291,58 @@ body {
 	.preloader__image {
 		margin-left: -32px;
 	}
+=======
+  opacity: 0;
+  display: none;
+}
+
+@media (min-width: 800px) {
+  
+  .logo {
+    height: 80px;
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+
+  .nav-list {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    position: relative;
+    padding: 0;
+    background: #05102500;
+  }
+
+  .favicon > img {
+    height: 75px;
+  }
+
+  .main-content {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .img-box {
+    display: contents;
+  }
+
+  .img-peronages {
+    width: auto;
+    max-height: 80vh;
+  }
+
+  .img-about-all {
+    width: 100%;
+  }
+
+  .main-content-wrap {
+    flex-wrap: wrap;
+  }
+
+  .preloader__image {
+    margin-left: -32px;
+  }
+>>>>>>> b591e15484be13fa90a661b57fed0f80a041c1a9
 }
