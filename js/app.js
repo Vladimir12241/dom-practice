@@ -4,7 +4,6 @@ import { Content } from "./contentGenerator.js";
 
 class App {
 	constructor() {
-		this.favicon = document.querySelector(".logo-link");
 		this.menu = document.querySelector("#menu-toggle");
 		this.contentBox = document.querySelector("#main-content");
 		this.contentMenuList = [];
