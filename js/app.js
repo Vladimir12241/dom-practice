@@ -10,17 +10,12 @@ class App {
 		this.contentMenuList = [];
 		this.contentTitul = [];
 
-		this.favicon.addEventListener("click", (e) => {
-			this.router();
-			return;
-		});
-
 		this.menu.addEventListener("change", (e) => {
 			this.navigationListHiden();
 		});
 
-		addEventListener("popstate", (e) => {
-			e.preventDefault;
+		window.addEventListener("popstate", (e) => {
+			e.preventDefault();
 			this.router();
 		});
 
@@ -36,8 +31,28 @@ class App {
 
 	router() {
 		let hash = window.location.hash.split("/");
-		hash = hash[hash.length - 1];
-		this.isActive(hash);
+		this.isActive(this.hashWalidator(hash));
+	}
+
+	hashWalidator(hash) {
+		if (hash.length < 3) {
+			hash = hash[hash.length - 1];
+			let isValid = false;
+			this.contentList.forEach((item) => {
+				let hashCheck = new RegExp(`\(?:${item.hash})`);
+				if (!hash.match(hashCheck)) {
+					return;
+				}
+				hash = item.hash;
+				isValid = true;
+			});
+			if (isValid === false) {
+				hash = "";
+			}
+			return hash;
+		} else {
+			return (hash = hash[1]);
+		}
 	}
 
 	isActive(hash) {
